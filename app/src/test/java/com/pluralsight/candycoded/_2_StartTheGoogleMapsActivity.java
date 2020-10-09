@@ -162,9 +162,8 @@ public class _2_StartTheGoogleMapsActivity {
                 new XMLTestHelpers.ViewContainer("@+id/text_view_address", "createMapIntent", "true");
         boolean address_set_correct =  viewContainers.contains(addressView);
 
-        Assert.assertTrue("In activity_info.xml, the TextView text_view_address does not have " +
-                        "the clickable and onClick properties set.",
-                address_set_correct);
+        Assert.assertEquals("In activity_info.xml, the TextView text_view_address does not have " +
+                "the clickable and onClick properties set.", true, address_set_correct);
     }
 
     public ArrayList<XMLTestHelpers.ViewContainer> readLayoutXML(String layoutFileName) {
